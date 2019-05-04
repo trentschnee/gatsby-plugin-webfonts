@@ -28,11 +28,15 @@ module.exports = {
               variants: ['300', '400', '500']
               //subsets: ['latin']
               //text: 'Hello'
+              //fontDisplay: 'swap',
+              //strategy: 'selfHosted' || 'base64' || 'cdn'
             }
           ]
         }
         //formats: ['woff2', 'woff'],
         //useMinify: true,
+        //usePreload: true,
+        //usePreconnect: false,
       }
     }
   ]

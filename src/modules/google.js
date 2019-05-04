@@ -4,7 +4,6 @@ const API_URL = `https://fonts.googleapis.com/css`;
 
 const defaultFontOptions = {
   fontDisplay: 'swap',
-  useEncode: false,
   strategy: 'selfHosted' //'base64' || 'cdn'
 };
 
