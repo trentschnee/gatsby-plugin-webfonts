@@ -17,9 +17,11 @@ export const onPreBootstrap = async (
 
   const optionsCacheKey = `options-${createContentDigest(options)}`;
 
-  if (!cache.get(optionsCacheKey)) {
+  const cachedOptions = await cache.get(optionsCacheKey);
+
+  if (!cachedOptions) {
     await webFonts(options);
-    cache.set(optionsCacheKey, options);
+    await cache.set(optionsCacheKey, options);
   }
 
   const filter = src => path.extname(src) !== '.css';
