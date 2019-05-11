@@ -14,7 +14,7 @@ export default function Preload({
     .map(urlString => urlString.replace(regex, '$1'))
     .filter(urlString => urlString.endsWith(`.${format}`));
 
-  const preloads = fontUrls.map((url, key) => (
+  return fontUrls.map((url, key) => (
     <link
       key={`webfonts${key}`}
       rel="preload"
@@ -24,6 +24,4 @@ export default function Preload({
       href={url}
     />
   ));
-
-  return <>{preloads}</>;
 }

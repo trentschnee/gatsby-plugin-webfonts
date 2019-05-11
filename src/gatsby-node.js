@@ -8,6 +8,7 @@ export const onPreBootstrap = async ({ store, pathPrefix }, pluginOptions) => {
   const { directory } = store.getState().program;
 
   const cacheFolder = path.join(directory, '.cache', 'webfonts');
+  const publicFolder = path.join(directory, 'public', 'static', 'webfonts');
 
   const options = createOptions({ ...pluginOptions, cacheFolder });
 
@@ -15,5 +16,5 @@ export const onPreBootstrap = async ({ store, pathPrefix }, pluginOptions) => {
 
   const filter = src => path.extname(src) !== '.css';
 
-  await fs.copy(cacheFolder, `./public/static/webfonts`, { filter });
+  await fs.copy(cacheFolder, publicFolder, { filter });
 };

@@ -6,5 +6,6 @@ export default function Preconnect({
   crossOrigin = 'anonymous'
 }) {
   if (disabled) return null;
+
   return <link rel="preconnect" href={href} crossOrigin={crossOrigin} />;
 }
