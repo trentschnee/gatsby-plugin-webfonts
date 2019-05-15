@@ -5,6 +5,7 @@
 - Creates minified @font-face CSS rules
 - Supports font-display property (Default: 'swap')
 - Handles preconnect and preload optimizations
+- Downloads fonts for self-hosting
 - Supports cdn, base64 and selfHosted Fonts
 
 ## Install
