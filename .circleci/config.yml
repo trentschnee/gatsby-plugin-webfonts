@@ -29,7 +29,7 @@ aliases:
 
   attach_to_bootstrap: &attach_to_bootstrap
     attach_workspace:
-      at: gatsby-plugin-material-ui
+      at: gatsby-plugin-webfonts
 
   e2e-test-workflow: &e2e-test-workflow
     filters:
@@ -57,7 +57,7 @@ jobs:
       - <<: *install_node_modules
       - <<: *persist_cache
       - persist_to_workspace:
-          root: gatsby-plugin-material-ui
+          root: gatsby-plugin-webfonts
           paths:
             - "*"
 
