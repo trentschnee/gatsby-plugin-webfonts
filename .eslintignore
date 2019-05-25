@@ -1,0 +1,8 @@
+/.git
+/coverage
+/e2e-tests/**/public/
+
+/gatsby-plugin-webfonts/**/*.js
+!/gatsby-plugin-webfonts/src/**/*.js
+
+node_modules

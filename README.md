@@ -5,94 +5,24 @@
 - Creates minified @font-face CSS rules
 - Supports font-display property (Default: 'swap')
 - Handles preconnect and preload optimizations
-- Downloads fonts for self hosting
-- Supports cdn, base64 and self hosted Fonts
+- Automatically download fonts for self hosting
+- Supports cdn, base64 and self hosted Fonts (Default: 'selfHosted')
 
 ## Install
 
-`npm install --save gatsby-plugin-webfonts`
+```sh
+// with npm
+npm install gatsby-plugin-webfonts
 
-## How to use
-
-Edit `gatsby-config.js`
-
-```javascript
-module.exports = {
-  plugins: [
-    {
-      resolve: `gatsby-plugin-webfonts`,
-      options: {
-        fonts: {
-          google: [
-            {
-              family: 'Roboto',
-              variants: ['300', '400', '500']
-              //subsets: ['latin']
-              //text: 'Hello'
-              //fontDisplay: 'swap',
-              //strategy: 'selfHosted' || 'base64' || 'cdn'
-            }
-          ]
-        }
-        //formats: ['woff2', 'woff'],
-        //useMinify: true,
-        //usePreload: true,
-        //usePreconnect: false,
-      }
-    }
-  ]
-};
+// with yarn
+yarn add gatsby-plugin-webfonts
 ```
 
-## Google Fonts
 
-Using [Google's Font API](https://code.google.com/apis/webfonts/docs/getting_started.html), name the font families you'd like to load.
+## Documentation
 
-```javascript
-module.exports = {
-  plugins: [
-    {
-      resolve: `gatsby-plugin-webfonts`,
-      options: {
-        fonts: {
-          google: [
-            {
-              family: 'Roboto',
-              variants: ['300', '400', '500']
-            },
-            {
-              family: 'Open Sans Condensed',
-              variants: ['300', '700']
-            }
-          ]
-        }
-      }
-    }
-  ]
-};
-```
+[The documentation](/gatsby-plugin-webfonts/README.md)
 
-You can also supply the text parameter to perform character subsetting:
+## License
 
-```javascript
-module.exports = {
-  plugins: [
-    {
-      resolve: `gatsby-plugin-webfonts`,
-      options: {
-        fonts: {
-          google: [
-            {
-              family: 'Roboto',
-              variants: ['300', '400', '500'],
-              text: 'Hello'
-            }
-          ]
-        }
-      }
-    }
-  ]
-};
-```
-
-The text subsetting functionality is only available for Google fonts.
+[MIT](LICENSE)
