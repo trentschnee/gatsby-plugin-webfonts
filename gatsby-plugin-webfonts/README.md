@@ -5,7 +5,7 @@
 - Creates minified @font-face CSS rules
 - Supports font-display property (Default: 'swap')
 - Handles preconnect and preload optimizations
-- Automatically download fonts for self hosting
+- Automatically downloads fonts for self hosting
 - Supports cdn, base64 and self hosted Fonts (Default: 'selfHosted')
 
 ## Install
@@ -31,22 +31,22 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: 'Roboto',
-              variants: ['300', '400', '500']
+              family: "Roboto",
+              variants: ["300", "400", "500"],
               //subsets: ['latin']
               //text: 'Hello'
               //fontDisplay: 'swap',
               //strategy: 'selfHosted' // 'base64' || 'cdn'
-            }
-          ]
-        }
+            },
+          ],
+        },
         //formats: ['woff2', 'woff'],
         //useMinify: true,
         //usePreload: true,
         //usePreconnect: false,
-      }
-    }
-  ]
+      },
+    },
+  ],
 };
 ```
 
@@ -63,18 +63,18 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: 'Roboto',
-              variants: ['300', '400', '500']
+              family: "Roboto",
+              variants: ["300", "400", "500"],
             },
             {
-              family: 'Open Sans Condensed',
-              variants: ['300', '700']
-            }
-          ]
-        }
-      }
-    }
-  ]
+              family: "Open Sans Condensed",
+              variants: ["300", "700"],
+            },
+          ],
+        },
+      },
+    },
+  ],
 };
 ```
 
@@ -89,15 +89,15 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: 'Roboto',
-              variants: ['300', '400', '500'],
-              text: 'Hello'
-            }
-          ]
-        }
-      }
-    }
-  ]
+              family: "Roboto",
+              variants: ["300", "400", "500"],
+              text: "Hello",
+            },
+          ],
+        },
+      },
+    },
+  ],
 };
 ```
 

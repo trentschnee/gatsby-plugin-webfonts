@@ -5,7 +5,7 @@
 - Creates minified @font-face CSS rules
 - Supports font-display property (Default: 'swap')
 - Handles preconnect and preload optimizations
-- Automatically download fonts for self hosting
+- Automatically downloads fonts for self hosting
 - Supports cdn, base64 and self hosted Fonts (Default: 'selfHosted')
 
 ## Install
@@ -17,7 +17,6 @@ npm install gatsby-plugin-webfonts
 // with yarn
 yarn add gatsby-plugin-webfonts
 ```
-
 
 ## Documentation
 
