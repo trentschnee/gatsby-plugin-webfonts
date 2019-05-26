@@ -68,6 +68,10 @@ export function createRequestUrl(font) {
     requestUrl += `&text=${encodeURIComponent(font.text)}`;
   }
 
+  if (font.fontDisplay) {
+    requestUrl += `&display=${encodeURIComponent(font.fontDisplay)}`;
+  }
+
   return requestUrl;
 }
 
