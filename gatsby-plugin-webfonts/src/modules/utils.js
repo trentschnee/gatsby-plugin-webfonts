@@ -5,30 +5,40 @@ import axios from "axios";
 import postcss from "postcss";
 import postcssJs from "postcss-js";
 
+function fontFaceReducer(fontDisplay = `swap`, useMerge) {
+  return (acc, obj) => {
+    if (useMerge) {
+      const srcs = obj.src.split(`,`);
+
+      const index = acc.findIndex(element => {
+        return element.src.split(`,`)[0] === srcs[0];
+      });
+
+      if (index > -1) {
+        // we don't know how many 'local'-names the font might have, so we
+        // just use the last entry, which should be the 'url' entry of the
+        // requested type.
+        acc[index].src = `${acc[index].src}, ${srcs[srcs.length - 1]}`;
+        return acc;
+      }
+    }
+
+    obj.fontDisplay = fontDisplay;
+    acc.push(obj);
+    return acc;
+  };
+}
+
 export async function parseCss(cssString, { fontDisplay = `swap`, useMerge }) {
   const root = postcss.parse(cssString);
 
   const cssObject = postcssJs.objectify(root);
 
   if (cssObject[`@font-face`]) {
-    cssObject[`@font-face`] = cssObject[`@font-face`].reduce((acc, obj) => {
-      if (useMerge) {
-        const srcs = obj.src.split(`,`);
-
-        const index = acc.findIndex(element => {
-          return element.src.split(`,`)[0] === srcs[0];
-        });
-
-        if (index > -1) {
-          acc[index].src = `${acc[index].src}, ${srcs[2]}`;
-          return acc;
-        }
-      }
-
-      obj.fontDisplay = fontDisplay;
-      acc.push(obj);
-      return acc;
-    }, []);
+    const reducer = fontFaceReducer(fontDisplay, useMerge);
+    cssObject[`@font-face`] = Array.isArray(cssObject[`@font-face`])
+      ? cssObject[`@font-face`].reduce(reducer, [])
+      : reducer([], cssObject[`@font-face`]);
   }
 
   const { css } = await postcss().process(cssObject, {
