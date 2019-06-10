@@ -17,7 +17,7 @@ function fontFaceReducer(fontDisplay = `swap`, useMerge) {
       if (index > -1) {
         // we don't know how many 'local'-names the font might have, so we
         // just use the last entry, which should be the 'url' entry of the
-        // requested type 
+        // requested type.
         acc[index].src = `${acc[index].src}, ${srcs[srcs.length - 1]}`;
         return acc;
       }
@@ -26,7 +26,7 @@ function fontFaceReducer(fontDisplay = `swap`, useMerge) {
     obj.fontDisplay = fontDisplay;
     acc.push(obj);
     return acc;
-  }
+  };
 }
 
 export async function parseCss(cssString, { fontDisplay = `swap`, useMerge }) {
@@ -36,8 +36,9 @@ export async function parseCss(cssString, { fontDisplay = `swap`, useMerge }) {
 
   if (cssObject[`@font-face`]) {
     const reducer = fontFaceReducer(fontDisplay, useMerge);
-    cssObject[`@font-face`] = Array.isArray(cssObject[`@font-face`]) ? 
-      cssObject[`@font-face`].reduce(reducer, []) : reducer([], cssObject[`@font-face`]);
+    cssObject[`@font-face`] = Array.isArray(cssObject[`@font-face`])
+      ? cssObject[`@font-face`].reduce(reducer, [])
+      : reducer([], cssObject[`@font-face`]);
   }
 
   const { css } = await postcss().process(cssObject, {
