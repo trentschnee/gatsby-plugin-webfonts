@@ -3,9 +3,9 @@
   "private": true,
   "version": "1.0.11",
   "dependencies": {
-    "@material-ui/core": "latest",
-    "@material-ui/styles": "latest",
-    "gatsby": "latest",
+    "@material-ui/core": "4.1.1",
+    "@material-ui/styles": "4.1.1",
+    "gatsby": "2.9.4",
     "gatsby-plugin-material-ui": "latest",
     "gatsby-plugin-react-helmet": "latest",
     "gatsby-plugin-webfonts": "^1.0.11",
@@ -26,8 +26,8 @@
     "test": "CYPRESS_SUPPORT=y yarn build && yarn start-server-and-test "
   },
   "devDependencies": {
+    "@testing-library/cypress": "^4.0.3",
     "cypress": "^3.3.0",
-    "cypress-testing-library": "^3.0.1",
     "gatsby-cypress": "^0.1.9",
     "start-server-and-test": "^1.9.0"
   }
