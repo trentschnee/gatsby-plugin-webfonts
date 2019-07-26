@@ -26,11 +26,12 @@
   "scripts": {
     "test:development-runtime": "yarn prepare && yarn workspace development-runtime test",
     "test:production-runtime": "yarn prepare && yarn workspace production-runtime test",
+    "test:path-prefix-prod-runtime": "yarn prepare && yarn workspace path-prefix-prod-runtime test",
     "prepare": "lerna run prepare",
     "lint": "eslint . --cache  --report-unused-disable-directives",
     "lint:ci": "eslint . --report-unused-disable-directives",
     "lint:fix": "eslint . --cache --fix",
-    "jest": "lerna run jest --stream"
+    "test:unit": "lerna run jest --stream"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

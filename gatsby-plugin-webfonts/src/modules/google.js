@@ -7,7 +7,12 @@ const defaultFontOptions = {
   strategy: `selfHosted`, //'base64' || 'cdn'
 };
 
-export default function google({ cacheFolder, formats, formatAgents }) {
+export default function google({
+  cacheFolder,
+  pathPrefix,
+  formats,
+  formatAgents,
+}) {
   return fonts =>
     Promise.all(
       fonts.map(async font => {
@@ -22,7 +27,7 @@ export default function google({ cacheFolder, formats, formatAgents }) {
             if (strategy === `cdn`) return css;
 
             return strategy === `selfHosted`
-              ? downloadFonts(css, cacheFolder)
+              ? downloadFonts(css, cacheFolder, pathPrefix)
               : encodeFonts(css);
           }),
         );
