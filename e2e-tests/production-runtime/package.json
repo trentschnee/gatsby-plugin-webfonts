@@ -1,14 +1,14 @@
 {
   "name": "production-runtime",
   "private": true,
-  "version": "1.0.12",
+  "version": "1.1.0",
   "dependencies": {
     "@material-ui/core": "4.1.1",
     "@material-ui/styles": "4.1.1",
     "gatsby": "2.9.4",
     "gatsby-plugin-material-ui": "latest",
     "gatsby-plugin-react-helmet": "latest",
-    "gatsby-plugin-webfonts": "^1.0.12",
+    "gatsby-plugin-webfonts": "^1.1.0",
     "react": "latest",
     "react-dom": "latest",
     "react-helmet": "latest"
