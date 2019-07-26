@@ -1,0 +1,34 @@
+{
+  "name": "path-prefix-prod-runtime",
+  "private": true,
+  "version": "1.0.12",
+  "dependencies": {
+    "@material-ui/core": "4.1.1",
+    "@material-ui/styles": "4.1.1",
+    "gatsby": "2.9.4",
+    "gatsby-plugin-material-ui": "latest",
+    "gatsby-plugin-react-helmet": "latest",
+    "gatsby-plugin-webfonts": "^1.0.12",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-helmet": "latest"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build --prefix-paths",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "yarn develop",
+    "serve": "gatsby serve --prefix-paths",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome",
+    "start-server-and-test": "start-server-and-test serve http://localhost:9000 cy:run",
+    "test": "CYPRESS_SUPPORT=y yarn build && yarn start-server-and-test "
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^4.0.3",
+    "cypress": "^3.3.0",
+    "gatsby-cypress": "^0.1.9",
+    "start-server-and-test": "^1.9.0"
+  }
+}

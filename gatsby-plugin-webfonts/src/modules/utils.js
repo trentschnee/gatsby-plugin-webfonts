@@ -70,7 +70,7 @@ export async function downloadFont(url, headers = {}) {
   return response.data;
 }
 
-export async function downloadFonts(css, downloadFolder) {
+export async function downloadFonts(css, downloadFolder, pathPrefix) {
   const regex = /url\((.+?)\)/gi;
   const fontUrls = css
     .match(regex)
@@ -85,7 +85,7 @@ export async function downloadFonts(css, downloadFolder) {
 
       await fs.outputFile(filePath, font);
 
-      return `/static/webfonts/${pathname}`;
+      return `${pathPrefix || ``}/static/webfonts/${pathname}`;
     }),
   );
 
