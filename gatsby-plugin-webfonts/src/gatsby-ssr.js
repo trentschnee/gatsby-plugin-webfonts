@@ -1,6 +1,7 @@
 import React from "react";
 import fs from "fs";
 import path from "path";
+import isEmpty from "lodash.isempty";
 
 import createOptions from "./create-options";
 import { isGooglePreconnectEnabled } from "./modules/google";
@@ -9,6 +10,8 @@ import Preload from "./components/preload";
 import Css from "./components/css";
 
 export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
+  if (isEmpty(pluginOptions.fonts)) return;
+
   const { usePreload, formats, ...options } = createOptions(pluginOptions);
 
   const css = fs.readFileSync(

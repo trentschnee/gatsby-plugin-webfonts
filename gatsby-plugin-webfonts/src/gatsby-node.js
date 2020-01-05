@@ -1,5 +1,6 @@
 import path from "path";
 import fs from "fs-extra";
+import isEmpty from "lodash.isempty";
 
 import createOptions from "./create-options";
 import webFonts from "./web-fonts";
@@ -8,6 +9,8 @@ export const onPreBootstrap = async (
   { cache, createContentDigest, store, pathPrefix },
   pluginOptions,
 ) => {
+  if (isEmpty(pluginOptions.fonts)) return;
+
   const { directory } = store.getState().program;
 
   const cacheFolder = path.join(directory, `.cache`, `webfonts`);
