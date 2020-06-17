@@ -85,7 +85,7 @@ export async function downloadFonts(css, downloadFolder, pathPrefix) {
 
       await fs.outputFile(filePath, font);
 
-      return `${pathPrefix || ``}/static/webfonts/${pathname}`;
+      return `${pathPrefix || ``}/static/webfonts${pathname}`;
     }),
   );
 
