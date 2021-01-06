@@ -10,7 +10,7 @@ function fontFaceReducer(fontDisplay = `swap`, useMerge) {
     if (useMerge) {
       const srcs = obj.src.split(`,`);
 
-      const index = acc.findIndex(element => {
+      const index = acc.findIndex((element) => {
         return element.src.split(`,`)[0] === srcs[0];
       });
 
@@ -74,10 +74,10 @@ export async function downloadFonts(css, downloadFolder, pathPrefix) {
   const regex = /url\((.+?)\)/gi;
   const fontUrls = css
     .match(regex)
-    .map(urlString => urlString.replace(regex, `$1`));
+    .map((urlString) => urlString.replace(regex, `$1`));
 
   const fontSrcs = await Promise.all(
-    fontUrls.map(async fontUrl => {
+    fontUrls.map(async (fontUrl) => {
       const { pathname } = url.parse(fontUrl);
       const filePath = path.join(downloadFolder, pathname);
 
@@ -98,10 +98,10 @@ export async function encodeFonts(css) {
   const regex = /url\((.+?)\)/gi;
   const fontUrls = css
     .match(regex)
-    .map(urlString => urlString.replace(regex, `$1`));
+    .map((urlString) => urlString.replace(regex, `$1`));
 
   const fontsEncoded = await Promise.all(
-    fontUrls.map(async fontUrl => {
+    fontUrls.map(async (fontUrl) => {
       const font = await downloadFont(fontUrl);
       const format = path.extname(fontUrl).substr(1);
       return `"data:application/x-font-${format};base64,${Buffer.from(

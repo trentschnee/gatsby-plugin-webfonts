@@ -26,8 +26,8 @@
     "test": "CYPRESS_SUPPORT=y yarn start-server-and-test "
   },
   "devDependencies": {
-    "@testing-library/cypress": "^5.0.2",
-    "cypress": "^3.8.0",
+    "@testing-library/cypress": "^7.0.3",
+    "cypress": "^6.2.1",
     "gatsby-cypress": "^0.9.0",
     "start-server-and-test": "^1.10.6"
   }

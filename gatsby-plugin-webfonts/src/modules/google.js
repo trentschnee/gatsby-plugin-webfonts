@@ -13,15 +13,15 @@ export default function google({
   formats,
   formatAgents,
 }) {
-  return fonts =>
+  return (fonts) =>
     Promise.all(
-      fonts.map(async font => {
+      fonts.map(async (font) => {
         const { fontDisplay, strategy } = createFontOptions(font);
 
         const requestUrl = createRequestUrl(font);
 
         const cssStrings = await Promise.all(
-          formats.map(async format => {
+          formats.map(async (format) => {
             const css = await downloadCss(requestUrl, formatAgents[format]);
 
             if (strategy === `cdn`) return css;
@@ -49,7 +49,7 @@ export function isGooglePreconnectEnabled(options) {
   if (!fonts || fonts.length === 0) return false;
 
   return (
-    fonts.findIndex(font => {
+    fonts.findIndex((font) => {
       const { strategy } = createFontOptions(font);
       return strategy === `cdn`;
     }) > -1

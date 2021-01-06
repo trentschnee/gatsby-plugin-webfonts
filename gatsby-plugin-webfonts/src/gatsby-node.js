@@ -27,6 +27,6 @@ export const onPreBootstrap = async (
     await cache.set(optionsCacheKey, options);
   }
 
-  const filter = src => path.extname(src) !== `.css`;
+  const filter = (src) => path.extname(src) !== `.css`;
   await fs.copy(cacheFolder, publicFolder, { filter });
 };

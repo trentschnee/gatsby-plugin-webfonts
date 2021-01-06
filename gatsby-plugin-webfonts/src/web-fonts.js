@@ -10,7 +10,7 @@ export default async function webFonts(options) {
     google: google(options),
   };
 
-  const merge = async css => {
+  const merge = async (css) => {
     const plugins = options.useMinify
       ? [
           cssnano({
@@ -27,7 +27,7 @@ export default async function webFonts(options) {
   };
 
   const cssStrings = await Promise.all(
-    Object.keys(options.fonts).map(key => {
+    Object.keys(options.fonts).map((key) => {
       return modules[key](options.fonts[key]);
     }),
   );
