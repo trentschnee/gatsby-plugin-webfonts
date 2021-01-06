@@ -3,15 +3,15 @@
   "private": true,
   "version": "1.1.3",
   "dependencies": {
-    "@material-ui/core": "4.8.2",
-    "@material-ui/styles": "4.8.2",
-    "gatsby": "2.18.17",
-    "gatsby-plugin-material-ui": "2.1.6",
-    "gatsby-plugin-react-helmet": "3.1.18",
+    "@material-ui/core": "4.11.2",
+    "@material-ui/styles": "4.11.2",
+    "gatsby": "2.30.1",
+    "gatsby-plugin-material-ui": "2.1.10",
+    "gatsby-plugin-react-helmet": "3.8.0",
     "gatsby-plugin-webfonts": "^1.1.3",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "react-helmet": "latest"
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-helmet": "6.1.0"
   },
   "license": "MIT",
   "scripts": {
@@ -26,9 +26,9 @@
     "test": "CYPRESS_SUPPORT=y yarn start-server-and-test "
   },
   "devDependencies": {
-    "@testing-library/cypress": "^5.0.2",
-    "cypress": "^3.8.0",
-    "gatsby-cypress": "^0.2.19",
+    "@testing-library/cypress": "^7.0.3",
+    "cypress": "^6.2.1",
+    "gatsby-cypress": "^0.9.0",
     "start-server-and-test": "^1.10.6"
   }
 }

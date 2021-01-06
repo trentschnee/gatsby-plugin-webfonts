@@ -1,6 +1,6 @@
 const { pathPrefix } = require(`../../gatsby-config`);
 
-const withTrailingSlash = url => `${url}/`;
+const withTrailingSlash = (url) => `${url}/`;
 
 describe(`Production pathPrefix`, () => {
   beforeEach(() => {
