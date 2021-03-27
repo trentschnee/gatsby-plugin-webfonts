@@ -7,7 +7,8 @@ import google from "./modules/google";
 
 export default async function webFonts(options) {
   const modules = {
-    google: google(options),
+    google: google(options, 1),
+    google2: google(options, 2),
   };
 
   const merge = async (css) => {

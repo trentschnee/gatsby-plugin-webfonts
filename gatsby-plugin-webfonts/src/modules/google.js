@@ -7,18 +7,16 @@ const defaultFontOptions = {
   strategy: `selfHosted`, //'base64' || 'cdn'
 };
 
-export default function google({
-  cacheFolder,
-  pathPrefix,
-  formats,
-  formatAgents,
-}) {
+export default function google(
+  { cacheFolder, pathPrefix, formats, formatAgents },
+  version,
+) {
   return (fonts) =>
     Promise.all(
       fonts.map(async (font) => {
         const { fontDisplay, strategy } = createFontOptions(font);
 
-        const requestUrl = createRequestUrl(font);
+        const requestUrl = createRequestUrl(font, version);
 
         const cssStrings = await Promise.all(
           formats.map(async (format) => {
@@ -56,13 +54,30 @@ export function isGooglePreconnectEnabled(options) {
   );
 }
 
-export function createRequestUrl(font) {
+export function createRequestUrl(font, version) {
   if (!font.family) return null;
 
-  let requestUrl = `${API_URL}?family=${font.family.replace(/ /g, `+`)}`;
+  let requestUrl = API_URL;
 
-  if (font.variants) {
-    requestUrl += `:${font.variants.join(`,`)}`;
+  if (version === 2) {
+    requestUrl += `2`;
+  }
+
+  requestUrl += `?family=${font.family.replace(/ /g, `+`)}`;
+
+  switch (version) {
+    case 1:
+      if (font.variatns) {
+        requestUrl += `:${font.variants.join(`,`)}`;
+      }
+      break;
+    case 2:
+      if (font.axes) {
+        requestUrl += `:${font.axes}`;
+      }
+      break;
+    default:
+      return null;
   }
 
   if (font.subsets) {
