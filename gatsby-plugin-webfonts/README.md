@@ -136,6 +136,58 @@ module.exports = {
 
 The text subsetting functionality is only available for Google fonts.
 
+### Google Fonts v2
+
+> This is an extension of the "Google Fonts" setting which uses the latest API.
+
+You can also use the latest [Google Fonts API v2](https://developers.google.com/fonts/docs/css2).
+
+Use the `axes` option like so:
+
+```javascript
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google2: [
+            {
+              family: "Roboto",
+              axes: "wght@300;400;500",
+            },
+          ],
+        },
+      },
+    },
+  ],
+};
+```
+
+A [variable font](https://web.dev/variable-fonts/) packs all the styles and weights of a font family into a single file.
+
+Only a few Google Fonts are available as [variable fonts](https://fonts.google.com/variablefonts).
+Some have their own custom axes that can be set accordingly.
+
+```javascript
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google2: [
+            {
+              family: "Rubik",
+              axes: "wght@300..600", // multiple ranges are supported, ex: "wght@300..500;700..900"
+            },
+          ],
+        },
+      },
+    },
+  ],
+};
+```
 
 ## License
 
