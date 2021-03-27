@@ -67,7 +67,7 @@ export function createRequestUrl(font, version) {
 
   switch (version) {
     case 1:
-      if (font.variatns) {
+      if (font.variants) {
         requestUrl += `:${font.variants.join(`,`)}`;
       }
       break;
