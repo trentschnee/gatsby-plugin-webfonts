@@ -1,7 +1,7 @@
 {
   "name": "production-runtime",
   "private": true,
-  "version": "2.1.1",
+  "version": "2.2.0",
   "dependencies": {
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
@@ -9,7 +9,7 @@
     "gatsby": "latest",
     "gatsby-plugin-material-ui": "latest",
     "gatsby-plugin-react-helmet": "latest",
-    "gatsby-plugin-webfonts": "^2.1.1",
+    "gatsby-plugin-webfonts": "^2.2.0",
     "react": "latest",
     "react-dom": "latest",
     "react-helmet": "latest"
