@@ -3,11 +3,11 @@ version: 2.1
 aliases:
   node-executor: &node-executor
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:14
 
   e2e-executor: &e2e-executor
     docker:
-      - image: cypress/browsers:node12.18.3-chrome87-ff82
+      - image: cypress/browsers:node14.15.0-chrome86-ff82
 
   restore_cache: &restore_cache
     restore_cache:
@@ -68,7 +68,7 @@ jobs:
       - <<: *restore_cache
       - <<: *install_node_modules
       - <<: *persist_cache
-      - run: yarn lint:ci
+      - run: yarn lint
   
   unit_tests:
     <<: *node-executor

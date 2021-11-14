@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { ThemeProvider } from "@material-ui/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
 import theme from "../../src/theme";
 
 export default function TopLayout(props) {
@@ -12,6 +12,10 @@ export default function TopLayout(props) {
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+          rel="stylesheet"
         />
       </Helmet>
       <ThemeProvider theme={theme}>
