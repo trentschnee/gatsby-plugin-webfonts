@@ -30,19 +30,19 @@
     "gatsby": "^3.0.0 || ^4.0.0"
   },
   "dependencies": {
-    "axios": "^0.24.0",
-    "cssnano": "^5.0.11",
-    "fs-extra": "^10.0.0",
+    "axios": "^0.26.1",
+    "cssnano": "^5.1.7",
+    "fs-extra": "^10.0.1",
     "lodash.isempty": "^4.4.0",
-    "postcss": "^8.3.11",
-    "postcss-js": "^3.0.3"
+    "postcss": "^8.4.12",
+    "postcss-js": "^4.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "babel-jest": "^27.0.6",
-    "babel-preset-gatsby-package": "^1.0.0",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "babel-jest": "^27.5.1",
+    "babel-preset-gatsby-package": "^2.11.0",
     "cross-env": "^7.0.3",
-    "jest": "^27.0.6"
+    "jest": "^27.5.1"
   }
 }
