@@ -20,7 +20,7 @@
   ],
   "workspaces": [
     "e2e-tests/*",
-    "@trentschnee/gatsby-plugin-webfonts"
+    "gatsby-plugin-webfonts"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
