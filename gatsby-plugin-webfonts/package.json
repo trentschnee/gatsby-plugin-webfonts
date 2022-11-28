@@ -1,11 +1,14 @@
 {
   "name": "gatsby-plugin-webfonts",
-  "version": "2.2.2",
+  "version": "0.0.0",
   "description": "A Gatsby plugin to handle cdn, base64 and self hosted webfonts",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hupe1980/gatsby-plugin-webfonts"
+    "url": "https://github.com/trentschnee/gatsby-plugin-webfonts"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "gatsby-plugin",
