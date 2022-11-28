@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-plugin-webfonts",
+  "name": "@trentschnee/gatsby-plugin-webfonts",
   "version": "2.3.0",
   "description": "A Gatsby plugin to handle cdn, base64 and self hosted webfonts",
   "license": "MIT",
@@ -47,5 +47,6 @@
     "babel-preset-gatsby-package": "^2.11.0",
     "cross-env": "^7.0.3",
     "jest": "^27.5.1"
-  }
+  },
+  "gitHead": "2809093e9d24e8ad0034b9c77a8f7c4bbf8e3e61"
 }
