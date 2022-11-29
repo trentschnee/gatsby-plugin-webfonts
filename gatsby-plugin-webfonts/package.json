@@ -8,7 +8,7 @@
     "url": "https://github.com/trentschnee/gatsby-plugin-webfonts"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "keywords": [
     "gatsby-plugin",

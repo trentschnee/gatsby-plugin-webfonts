@@ -33,7 +33,7 @@
     "upgrade:all": "yarn upgrade-interactive --latest"
   },
   "publishConfig": {
-    "@trentschnee:registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
