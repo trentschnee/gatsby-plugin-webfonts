@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-plugin-webfonts",
+  "name": "@trentschnee/gatsby-plugin-webfonts",
   "version": "2.3.2",
   "description": "A Gatsby plugin to handle cdn, base64 and self hosted webfonts",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "url": "https://github.com/trentschnee/gatsby-plugin-webfonts"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "@trentschnee:registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "gatsby-plugin",
@@ -22,6 +22,7 @@
     "webfontloader"
   ],
   "main": "index.js",
+  
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
     "build: watch": "babel -w src --out-dir . --ignore **/__tests__",
@@ -48,5 +49,5 @@
     "cross-env": "^7.0.3",
     "jest": "^27.5.1"
   },
-  "gitHead": "4ef6670c006364192e81f9bcde764112ea7d569f"
+  "gitHead": "7198eec13bd128dce103410221e8ea70eebcac8a"
 }

@@ -22,9 +22,7 @@
     "e2e-tests/*",
     "gatsby-plugin-webfonts"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
+
   "scripts": {
     "test:development-runtime": "yarn prepare && yarn workspace development-runtime test",
     "test:production-runtime": "yarn prepare && yarn workspace production-runtime test",
