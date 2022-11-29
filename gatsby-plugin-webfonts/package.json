@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-plugin-webfonts",
+  "name": "@trentschnee/gatsby-plugin-webfonts",
   "version": "2.3.6",
   "description": "A Gatsby plugin to handle cdn, base64 and self hosted webfonts",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "url": "https://github.com/trentschnee/gatsby-plugin-webfonts"
   },
   "publishConfig": {
-    "@trentschnee:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "gatsby-plugin",

@@ -4,7 +4,7 @@
   "version": "2.3.6",
   "command": {
     "publish": {
-      "@trentschnee:registry": "https://npm.pkg.github.com/"
+      "registry": "https://npm.pkg.github.com/"
     }
   }
 }
