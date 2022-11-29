@@ -1,6 +1,5 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "@trentschnee/gatsby-plugin-webfonts",
   "description": "A Gatsby plugin to handle cdn, base64 and self hosted webfonts",
   "license": "MIT",
   "repository": {
