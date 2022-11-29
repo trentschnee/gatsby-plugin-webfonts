@@ -25,7 +25,7 @@
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
     "build: watch": "babel -w src --out-dir . --ignore **/__tests__",
-    "prepare": "cross-env NODE_ENV=production npm run build",
+    "prepare": "cross-env NODE_ENV=production && npm run build",
     "jest": "jest",
     "jest:watch": "jest --watch"
   },
@@ -48,5 +48,5 @@
     "cross-env": "^7.0.3",
     "jest": "^27.5.1"
   },
-  "gitHead": "7198eec13bd128dce103410221e8ea70eebcac8a"
+  "gitHead": "42b7b16faefda0982af21495bdb60045366eb6dc"
 }
