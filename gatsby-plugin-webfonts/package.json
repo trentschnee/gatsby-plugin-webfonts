@@ -1,6 +1,6 @@
 {
   "name": "@trentschnee/gatsby-plugin-webfonts",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "A Gatsby plugin to handle cdn, base64 and self hosted webfonts",
   "license": "MIT",
   "repository": {
@@ -22,7 +22,6 @@
     "webfontloader"
   ],
   "main": "index.js",
-  
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
     "build: watch": "babel -w src --out-dir . --ignore **/__tests__",
