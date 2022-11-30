@@ -59,10 +59,7 @@ typings/
 
 # next.js build output
 .next
-
 # Lib folder
 lib
-
 .DS_Store
-.npmrc
-.npmrc
+*.npmrc
