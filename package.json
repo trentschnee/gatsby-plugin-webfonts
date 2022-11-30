@@ -31,7 +31,7 @@
     "test:unit": "lerna run jest --stream",
     "outdated:all": "yarn outdated",
     "upgrade:all": "yarn upgrade-interactive --latest",
-    "publish":"lerna publish --registry=https://npm.pkg.github.com/"
+    "publish": "lerna publish"
   },
   "publishConfig": {
     "access": "public"
